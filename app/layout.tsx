@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
 import { CartProvider } from "./lib/cart";
 import { Header } from "./components/Header";

@@ -58,7 +58,12 @@ export default function ProductDetail() {
             className="detail-img"
             style={{ background: `linear-gradient(140deg, ${c1} 0%, ${c2} 100%)` }}
           >
-            <Icon name={product.icon} size={96} className="di-icon" />
+            <Icon
+              name={product.icon}
+              size={96}
+              className="di-icon"
+              style={{ color: product.fg }}
+            />
           </div>
           <Link href="/" className="back-btn" aria-label="返回首页">
             <Icon name="back" size={20} />

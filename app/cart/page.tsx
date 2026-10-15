@@ -77,7 +77,7 @@ export default function CartPage() {
                   className="cart-thumb"
                   style={{ background: `linear-gradient(140deg, ${c1}, ${c2})` }}
                 >
-                  <Icon name={p.icon} size={32} />
+                  <Icon name={p.icon} size={32} style={{ color: p.fg }} />
                 </Link>
 
                 <div className="cart-info">

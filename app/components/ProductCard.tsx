@@ -14,7 +14,12 @@ export function ProductCard({ product }: { product: Product }) {
         }}
       >
         {product.tag && <span className="p-tag">{product.tag}</span>}
-        <Icon name={product.icon} size={44} className="p-img-icon" />
+        <Icon
+          name={product.icon}
+          size={44}
+          className="p-img-icon"
+          style={{ color: product.fg }}
+        />
       </div>
       <div className="p-info">
         <p className="p-name">{product.name}</p>

@@ -1,8 +1,8 @@
-import type { SVGProps } from "react";
+import type { ReactNode, SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 
-const paths: Record<string, React.ReactNode> = {
+const paths: Record<string, ReactNode> = {
   cart: (
     <>
       <path d="M3 4h2l2.2 11h9.6L19 7H6" />
@@ -126,6 +126,49 @@ const paths: Record<string, React.ReactNode> = {
     </>
   ),
   box: <rect x="4" y="4" width="16" height="16" rx="4" />,
+  speaker: (
+    <>
+      <rect x="5" y="4" width="14" height="16" rx="3.5" />
+      <circle cx="12" cy="14" r="3.4" />
+      <circle cx="12" cy="8" r="1.1" />
+    </>
+  ),
+  camera: (
+    <>
+      <rect x="3" y="7" width="18" height="13" rx="3" />
+      <circle cx="12" cy="13.5" r="4" />
+      <path d="M9 7l1.5-2.5h3L15 7" />
+    </>
+  ),
+  candle: (
+    <>
+      <rect x="9" y="10" width="6" height="10" rx="1.5" />
+      <path d="M12 9.5c1.4-1.4 1.1-3 0-4.3-1.1 1.3-1.4 2.9 0 4.3" />
+      <path d="M6.5 20h11" />
+    </>
+  ),
+  gift: (
+    <>
+      <rect x="4" y="9" width="16" height="11" rx="2.5" />
+      <path d="M4 13.5h16M12 9v11" />
+      <path d="M12 9C10 9 8.7 7.8 9.1 6.4 9.5 5.1 11.2 5.6 12 9c.8-3.4 2.5-3.9 2.9-2.6C15.3 7.8 14 9 12 9z" />
+    </>
+  ),
+  plant: (
+    <>
+      <path d="M8 14h8l-1.2 6.5H9.2L8 14z" />
+      <path d="M12 14V9" />
+      <path d="M12 11c0-3-2.2-4.8-5-4.8 0 3 2.2 4.8 5 4.8z" />
+      <path d="M12 11c0-3 2.2-4.8 5-4.8 0 3-2.2 4.8-5 4.8z" />
+    </>
+  ),
+  bottle: (
+    <>
+      <path d="M10 3h4" />
+      <path d="M10.5 3v3.5L8.5 10v8.5a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V10l-2-3.5V3" />
+      <path d="M8.5 13.5h7" />
+    </>
+  ),
 };
 
 export function Icon({ name, size = 24, ...rest }: IconProps & { name: string }) {

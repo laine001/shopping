@@ -56,24 +56,6 @@ export default function Home() {
         </button>
       </form>
 
-      {/* 分类标签 */}
-      <div className="chips" role="tablist">
-        {[ALL, ...CATEGORIES.map((c) => c.label)].map((c) => (
-          <button
-            key={c}
-            role="tab"
-            aria-selected={category === c}
-            className={`chip${category === c ? " active" : ""}`}
-            onClick={() => {
-              setCategory(c);
-              scrollToFeeds();
-            }}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-
       {/* Banner */}
       <section className="banner">
         <span className="blob one" />
@@ -86,17 +68,19 @@ export default function Home() {
         </button>
       </section>
 
-      {/* 金刚区 */}
+      {/* 金刚区：分类入口，点击筛选，再次点击回到全部 */}
       <section aria-label="商品分类">
         <div className="grid-icons">
           {CATEGORIES.map((c) => {
             const s = ICON_STYLE[c.key] ?? { bg: "var(--navy-soft)", fg: "var(--navy)" };
+            const active = category === c.key;
             return (
               <button
                 key={c.key}
-                className="icon-cell"
+                className={`icon-cell${active ? " active" : ""}`}
+                aria-pressed={active}
                 onClick={() => {
-                  setCategory(c.key);
+                  setCategory(active ? ALL : c.key);
                   scrollToFeeds();
                 }}
               >

@@ -70,7 +70,7 @@ export default function CheckoutPage() {
                   className="thumb"
                   style={{ background: `linear-gradient(140deg, ${c1}, ${c2})` }}
                 >
-                  <Icon name={p.icon} />
+                  <Icon name={p.icon} style={{ color: p.fg }} />
                 </span>
                 <span className="name">{p.name}</span>
                 <span className="qty">×{i.qty}</span>
@@ -112,7 +112,7 @@ export default function CheckoutPage() {
       {/* 底部提交栏 */}
       <div className="action-bar">
         <div className="action-bar-inner">
-          <div className="total" style={{ textAlign: "right" }}>
+          <div className="total">
             <div className="lbl" style={{ fontSize: 12, color: "var(--text-3)" }}>
               应付
             </div>
